@@ -180,17 +180,9 @@
         return text;
     }
     function sendQuery(data){
-      $.ajax({
-        type: "post",
-        url: "https://script.google.com/macros/s/AKfycbw4hn_cIASXSR29tM-Rv4r13ij-qnaZswfvK7XFRDdw2LbFEcc/exec",
-        data: data,
-        dataType: "JSON",
-        success: function (response) {
-          handleData(response);
-          $('#name').val('');
-          $('#phone').val(''); 
-        }
-      });
+      $.ajax("handler.php").done(function(result){
+            document.getElementById("dataView").innerHTML = result;
+        }); 
     }
     function updateStatus(name, phone, index, that){
       var data = {
