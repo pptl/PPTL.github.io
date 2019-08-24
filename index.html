@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-tw">
 <head>
@@ -95,6 +96,7 @@
 </div>
 </div>
 </div>
+<div id="footer">製作 by <a href="https://iandays.com" target="_blank">Ian Chu.</a></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -180,10 +182,9 @@
         return text;
     }
     function sendQuery(data){
-        /*
       $.ajax({
         type: "post",
-        url: "https://script.google.com/macros/s/AKfycbw02S7BJklH5yJhXxPieCsAntq_FyffI7MohMmAghKhntrTfvMs/exec",
+        url: "https://script.google.com/macros/s/AKfycbz3fU3FVDmIQehtWX6ecKuV_A67lE64FEQ-ekmOZ_jZDyY96z0/exec",
         data: data,
         dataType: "JSON",
         success: function (response) {
@@ -192,27 +193,6 @@
           $('#phone').val(''); 
         }
       });
-        */
-    $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbw02S7BJklH5yJhXxPieCsAntq_FyffI7MohMmAghKhntrTfvMs/exec",
-    type:"post",
-    dataType: "JSON",
-    // This is the important part
-    xhrFields: {
-        withCredentials: true
-    },
-    // This is the important part
-    data: data,
-    success: function (response) {
-        handleData(response);
-          $('#name').val('');
-          $('#phone').val(''); 
-    },
-    error: function (xhr, status) {
-        // handle errors
-        alert("pokai");
-    }
-});
     }
     function updateStatus(name, phone, index, that){
       var data = {
@@ -224,7 +204,7 @@
       };
       $.ajax({
         type: "post",
-        url: "https://script.google.com/macros/s/AKfycbw02S7BJklH5yJhXxPieCsAntq_FyffI7MohMmAghKhntrTfvMs/exec",
+        url: "https://script.google.com/macros/s/AKfycbz3fU3FVDmIQehtWX6ecKuV_A67lE64FEQ-ekmOZ_jZDyY96z0/exec",
         data: data,
         dataType: "JSON",
         success: function (response) {
