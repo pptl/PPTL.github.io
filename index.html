@@ -181,6 +181,7 @@
     }
     function sendQuery(data){
       $.ajax("handler.php").done(function(result){
+        alert("hahahaha");
             document.getElementById("dataView").innerHTML = result;
         }); 
     }
