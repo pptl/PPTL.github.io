@@ -197,7 +197,7 @@
       });
       */
       $.ajax("handler.php").done(function(result){
-        $("#dataView").append(result);
+        alert(result.text);
         });
     }
     function updateStatus(name, phone, index, that){
